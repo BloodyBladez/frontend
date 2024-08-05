@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Hsar">
+    <meta name="description" content="Text Fighting - браузерная игра в жанре файтинга. 
+    Тебя ждёт много контента: разные персонажи со своими способностями, сильными и слабыми 
+    сторонами, которых можно будет покупать в магазине. Карточный геймплей, где важна будет 
+    тактика, а также удача. ПВЕ и ПВП режимы. Надёжная связь с разработчиком, у игры есть свой дискорд 
+    сервер.
+    
+    Text Fighting is a browser-based fighting game. 
+ There is a lot of content waiting for you: different characters with their own abilities, strong and weak 
+ parties that can be bought in the store. Card gameplay, where it will be important 
+ tactics, as well as luck. PVE and PVP modes. Reliable communication with the developer, the game has its own discord 
+ the server.">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/characters.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <title>
+        Text Fighting
+    </title>
+
+    <link rel="shortcut icon" href="images/Warrior2.jpg">
+
+</head>
+
+<body>
+    
+<header>
+   <img src="images/logo4.png" alt="logo" height="70px" width="auto" id="logo">
+   <a href="characters.html"> <button id="back">назад</button> </a>
+   <button id="profile"></button>
+   <a href="settings.html"> <button id="settings"></button> </a>
+
+   <div id="ProjectName">Text Fighting</div>
+</header>
+
+    <main>
+
+        <img src="images/krovaCut.png" height="900px" width="auto" id="character2">
+
+        <div id="backgroundCharacters">
+
+            <div class="abilities">
+
+                <button class="abilitiesButtons" id="lunge"></button>
+                <button class="abilitiesButtons" id="fencing"></button>
+                <button class="abilitiesButtons" id="circularStrike"></button>
+                <button class="lustAbilitiesButtons" id="piercing"></button>
+                <button class="passivButton" id="krovaPassive"></button>
+                <button class="firstButton" id="shadowStrike"></button>
+                <button class="lowabilitiesButtons" id="fireStrike"></button>
+                <button class="lowabilitiesButtons" id="bless"></button>
+                <button class="lowabilitiesButtons" id="bloodMoon"></button>
+
+            </div>
+            <div class="bio"></div>
+            <div class="characteristics">
+                <p>Класс: воин</p>
+                <p>Цена: имеется в наличии</p>
+                <p>Здоровье: 200</p>
+                <p>Броня: 70</p>
+                <p>МагБроня: 10</p>
+                <p>Стамина: 3</p>
+            </div>    
+
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <button class="close"> </button>
+              <p id="lungeDescription"> <span class="title">ВЫПАД</span> <br><br>
+                 Совершает выпад вперёд, ударяя мечом <br> 
+                 Расход стамины: 1 <br> 
+                 Урон: 10 <br> 
+                 Тип урона: <span class="physical">физический</span> </p>
+              <p id="fencingDescription"> fencing</p>
+              <p id="circularStrikeDescription">circus</p>
+              <p id="piercingDescription">piercing</p>
+              <p id="krovaPassiveDescription">passive</p>
+              <p id="shadowStrikeDescription">shadow</p>
+              <p id="fireStrikeDescription">fireStrike</p>
+              <p id="blessDescription">bless</p>
+              <p id="bloodMoonDescription">blodmoon</p>
+            </div>
+          </div>
+
+        
+    </main>
+
+   <footer>
+    <span id="footerLine"> Игра создана пользователем под ником hsar </span>
+   </footer>
+
+   <script src="scripts/main.js"></script>
+</body>
+
+</html>

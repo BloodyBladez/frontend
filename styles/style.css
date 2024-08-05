@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 750px;   /* для настроек */
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 80px;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../images/backside.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    background-image: url('../images/footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin-top: 95px;
+    border-radius: 30px 30px 0 0;
+    border-top: 5px solid black;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 3em;
+    line-height: 150px;
+
+}
+
+#footerLine {
+    margin-left: 20px;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;   /* шрифт */
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  
+
+#character1 {
+    float: left;
+    margin-top: 0px;
+    margin-left: 80;  
+    padding-left: 0;  /* МАНЕКЕН */
+}
+
+.button {
+    background-color: blueviolet;  /* КНОПКИ */
+    height: 100px;
+    width: 400px;
+    margin-left: 390px;
+    margin-top: 50px;
+    border-radius: 30px;
+    border: 5px solid black;
+    text-align: center;
+    line-height: 90px;
+    font-size: 4em;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+
+
+#store {
+    background-image: url('../images/store10.jpg');
+    background-position: left;
+}
+
+#store:hover {
+    background-image: url('../images/store20.jpg');
+    color:red;
+    border-color: red;
+}
+
+#character {
+    background-image: url('../images/camp10.jpg');
+    background-position: center;
+}
+
+#character:hover {
+    background-image: url('../images/camp20.jpg');
+    color:red;
+    border-color: red;
+}
+
+#battle {
+    background-image: url('../images/battle10.jpg');
+    background-position: center;
+}
+
+#battle:hover {
+    background-image: url('../images/battle20.jpg');
+    color:red;
+    border-color: red;
+}
+
+#castle {
+    background-image: url('../images/castle10.jpg');
+    background-position: bottom;
+}
+
+#castle:hover {
+    background-image: url('../images/castle20.jpg');
+    color:red;
+    border-color: red;
+}
+
+#court {
+    background-image: url('../images/court10.jpg');
+    background-position: center;
+}
+
+#court:hover {
+    background-image: url('../images/court20.jpg');
+    color:red;
+    border-color: red;
+}
+
+ #logo {
+    margin-top: 8px;
+    margin-bottom: 3px;   /* ШАПКА */
+    padding-left: 5px;
+    display: block;
+    float: left;
+    padding-right: 10px;
+} 
+
+#profile {
+    display: block;      /* ШАПКА */
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 0;
+    background-image: url('../images/profile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#profile:hover {
+    background-image: url('../images/profile20.png');
+    cursor: pointer;
+}
+
+#settings {
+    display: block;      /* ШАПКА */
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 0;
+    background-image: url('../images/settings.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#settings:hover {
+    background-image: url('../images/settings20.png');
+    cursor: pointer;
+}
+
+#ProjectName {
+    height: 80px;
+    line-height: 80px;    /* ШАПКА */
+    float: left;
+    font-size: 3em;
+    color: white;
+    cursor: default;
+}
+
+#back {
+    height: 40px;
+    width: 150px;
+    margin-top: 20px;
+    margin-right: 20px;    /* НАЗАД */
+    font-size: 2em;
+    float: right;
+    cursor: pointer;
+}
+
+#back:hover {
+    background-color: grey;
+    border: 2px solid white;
+}
+
+#languageLine {
+   padding-top: 20px;  /* ЯЗЫКИ */
+   padding-left: 80px;
+   font-size: 3em;
+   color: white;
+}
+
+#languageLineEN {
+    padding-top: 20px;
+    padding-left: 40px;  /* ЯЗЫКИ */
+    font-size: 3em;
+ }
+
+#ru {
+    width: 200px; /* ЯЗЫКИ */
+    height: 30px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: rgb(66, 66, 66);
+    color: rgb(204, 203, 203);
+}
+
+#en {
+    width: 200px;  /* ЯЗЫКИ */
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+}
+
+#ruEN {
+    width: 200px;   /* ЯЗЫКИ */
+    float: left; 
+    margin-left: 10px;
+}
+
+#enEN {
+    width: 200px;   /* ЯЗЫКИ */
+    float: left;
+    background-color: rgb(66, 66, 66);
+    color: rgb(204, 203, 203);
+}
