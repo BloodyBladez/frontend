@@ -220,6 +220,9 @@ p {
 
 .title {
   font-size: 100px; /* ЗАГОЛОВОК В ОКНАХ СПОСОБНОСТЕЙ */
+  text-align: center;
+  display: block;
+  font-weight: 900;
 }
 
 .physical {
