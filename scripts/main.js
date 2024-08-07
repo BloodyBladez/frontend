@@ -54,7 +54,7 @@
     const des1 = document.querySelector('#fencingDescription');
     const des2 = document.querySelector('#circularStrikeDescription');
     const des3 = document.querySelector('#piercingDescription');
-    const des4 = document.querySelector('#krovaPassiveDescription');
+    const des4 = document.querySelector('#rageDescription');
     const des5 = document.querySelector('#shadowStrikeDescription');
     const des6 = document.querySelector('#fireStrikeDescription');
     const des7 = document.querySelector('#blessDescription');
@@ -65,7 +65,7 @@
     const btn1 = document.querySelector('#fencing');
     const btn2 = document.querySelector('#circularStrike');
     const btn3 = document.querySelector('#piercing');
-    const btn4 = document.querySelector('#krovaPassive');
+    const btn4 = document.querySelector('#rage');
     const btn5 = document.querySelector('#shadowStrike');
     const btn6 = document.querySelector('#fireStrike');
     const btn7 = document.querySelector('#bless');

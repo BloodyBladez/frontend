@@ -176,7 +176,7 @@ p {
     width: 100%; 
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);   
+    background-color: rgba(0, 0, 0, 0.4); 
   }
   
   .modal-content {
@@ -214,17 +214,21 @@ p {
     display: none;
     position: fixed;
     text-align: left;
-    width: 1470px;
+    width: 1370px;                /* ТЕКСТ В ОКНАХ СПОСОБНОСТЕЙ */
     margin-top: -70px;
     font-size: 3.5em;
     margin-left: 75px;
+    margin-top: 0px;
 }
 
 .title {
-    font-size: 100px;
-    margin-left: 495px;
+    font-size: 100px;           /* ЗАГОЛОВОК В ОКНАХ СПОСОБНОСТЕЙ */
 }
 
 .physical {
-    color: rgb(172, 57, 11);
+    color: rgb(172, 57, 11);      /* ФИЗ. ТИП УРОНА */
+}
+
+.magic {
+    color: deepskyblue;
 }
