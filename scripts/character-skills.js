@@ -1,4 +1,4 @@
-"use strict";
+import {assertThatFound} from "./lib.js";
 
 const SKILLS = new Map()
   .set("ab_lunge", {
@@ -74,8 +74,7 @@ if (!closeButton)
 closeButton.onclick = closeSkillsPopup;
 
 const containerBackground = document.getElementById("skillsDescriptionContainerBackground");
-if (!containerBackground)
-  throw new Error("Element with ID 'skillsDescriptionContainerBackground' not found.");
+assertThatFound(containerBackground, "skillsDescriptionContainerBackground");
 containerBackground.onclick = function(event) {
   if (event.target == containerBackground)
     closeSkillsPopup();
@@ -104,18 +103,15 @@ function closeSkillsPopup() {
  */
 function setSkillData(name, desc) {
   const nameContainer = document.getElementById("skillsDescriptionTitle");
-  if (!nameContainer)
-    throw new Error("Element with ID 'skillsDescriptionTitle' not found.");
+  assertThatFound(nameContainer, "skillsDescriptionTitle");
   nameContainer.innerHTML = name;
 
   const descContainer = document.getElementById("skillsDescription");
-  if (!descContainer)
-    throw new Error("Element with ID 'skillsDescription' not found.");
+  assertThatFound(descContainer, "skillsDescription");
   descContainer.innerHTML = desc;
 
   const allContainer = document.getElementById("skillsDescriptionContainer");
-  if (!allContainer)
-    throw new Error("Element with ID 'skillsDescriptionContainer' not found.");
+  assertThatFound(allAbilityButtons, "skillsDescriptionContainer");
   allContainer.style.display = "block";
 
   containerBackground.style.display = "block";
