@@ -79,7 +79,7 @@ p {
   padding-left: 0; /* МАНЕКЕН */
 }
 
-.abilitiesButtons {
+.abilitiesButton {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -90,100 +90,44 @@ p {
   border: 3px solid black;
 }
 
-.abilitiesButtons:hover {
+.abilitiesButton:hover {
   border-color: red; /* СПОСОБНОСТИ */
   cursor: pointer;
 }
 
-.lustAbilitiesButtons {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%; /* СПОСОБНОСТИ */
-  margin-top: 10px;
-  margin-bottom: 10px;
+.passiveButton {
   margin-right: 0px;
-  margin-left: 10px;
-  border: 3px solid black;
-}
-
-.lustAbilitiesButtons:hover {
-  /* СПОСОБНОСТИ */
-  border-color: red;
-  cursor: pointer;
-}
-
-.passivButton {
-  height: 100px;
   width: 100px;
+  height: 100px;
   border-radius: 50%;
-  margin-left: 100px; /* СПОСОБНОСТИ */
-  padding-top: 50px;
   border: 3px solid black;
 }
 
-.passivButton:hover {
-  border-color: red; /* СПОСОБНОСТИ */
-  cursor: pointer;
+.abilitiesRow1 {}
+.abilitiesRow2 {
+  padding-left: 10%;
 }
 
-.lowabilitiesButtons {
-  margin-left: 112px;
-  margin-right: 10px;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%; /* СПОСОБНОСТИ */
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 3px solid black;
-}
-
-.lowabilitiesButtons:hover {
-  border-color: red; /* СПОСОБНОСТИ */
-  cursor: pointer;
-}
-
-.firstButton {
-  margin-left: 171px;
-  margin-right: 10px;
-  height: 200px; /* СПОСОБНОСТИ */
-  width: 200px;
-  border-radius: 50%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 3px solid black;
-}
-
-.firstButton:hover {
-  border-color: red;
-  cursor: pointer; /* СПОСОБНОСТИ */
-}
-
-#lunge {
-  background-image: url("../images/lunge.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; /* ПЕРВАЯ СПОСОБНОСТЬ */
-  background-position: center;
-}
-
-.modal {
+#skillsDescriptionContainerBackground { /* Модальное окно */
   display: none;
   position: fixed;
   z-index: 1;
   left: 0;
-  top: 0; /* Модальное окно */
+  top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
+#skillsDescriptionContainer { /* Модальное окно */
+  display: none;
   height: 740px;
   width: 1470px;
   margin-left: 380px;
   margin-top: 110px;
   border-radius: 30px;
-  background-image: url("../images/backgroundCharacters.jpeg"); /* Модальное окно */
+  background-image: url("../images/backgroundCharacters.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   border: 5px solid blueviolet;
@@ -202,23 +146,23 @@ p {
   margin-top: 5px;
   border-width: 0;
   cursor: pointer;
+  position: fixed;
 }
 
 .close:hover {
   background-image: url("../images/cross20.png"); /* Модальное окно */
 }
 
-.skillsDescriptions {
-  display: none;
+#skillsDescription { /* ТЕКСТ В ОКНАХ СПОСОБНОСТЕЙ */
+  display: block;
   position: fixed;
   text-align: left;
-  width: 1370px; /* ТЕКСТ В ОКНАХ СПОСОБНОСТЕЙ */
-  margin-top: -70px;
+  width: 1370px;
   font-size: 3.5em;
   margin-left: 75px;
 }
 
-.title {
+#skillsDescriptionTitle {
   font-size: 100px; /* ЗАГОЛОВОК В ОКНАХ СПОСОБНОСТЕЙ */
   text-align: center;
   display: block;
@@ -231,4 +175,13 @@ p {
 
 .magic {
   color: deepskyblue; /* МАГ. ТИП УРОНА */
+}
+
+
+
+#ab_lunge {
+  background-image: url("../images/lunge.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; /* ПЕРВАЯ СПОСОБНОСТЬ */
+  background-position: center;
 }

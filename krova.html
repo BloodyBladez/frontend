@@ -43,15 +43,19 @@
 
       <div id="backgroundCharacters">
         <div class="abilities">
-          <button class="abilitiesButtons" id="lunge"></button>
-          <button class="abilitiesButtons" id="fencing"></button>
-          <button class="abilitiesButtons" id="circularStrike"></button>
-          <button class="lustAbilitiesButtons" id="piercing"></button>
-          <button class="passivButton" id="rage"></button>
-          <button class="firstButton" id="shadowStrike"></button>
-          <button class="lowabilitiesButtons" id="fireStrike"></button>
-          <button class="lowabilitiesButtons" id="bless"></button>
-          <button class="lowabilitiesButtons" id="bloodMoon"></button>
+          <div class="abilitiesRow1">
+            <button class="abilitiesButton" id="ab_lunge"></button>
+            <button class="abilitiesButton" id="ab_fencing"></button>
+            <button class="abilitiesButton" id="ab_circularStrike"></button>
+            <button class="abilitiesButton" id="ab_piercing"></button>
+            <button class="abilitiesButton passiveButton" id="ab_rage"></button>
+          </div>
+          <div class="abilitiesRow2">
+            <button class="abilitiesButton" id="ab_shadowStrike"></button>
+            <button class="abilitiesButton" id="ab_fireStrike"></button>
+            <button class="abilitiesButton" id="ab_bless"></button>
+            <button class="abilitiesButton" id="ab_bloodMoon"></button>
+          </div>
         </div>
         <div class="bio"></div>
         <div class="characteristics">
@@ -64,102 +68,19 @@
         </div>
       </div>
 
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <button class="close"></button>
-
-          <p class="skillsDescriptions" id="lungeDescription">
-            <span class="title">ВЫПАД</span>
-            Совершает выпад вперёд, ударяя мечом <br>
-            Расход стамины: 1 <br>
-            Урон: 10 <br>
-            Тип урона: <span class="physical">физический</span>
-          </p>
-
-          <p class="skillsDescriptions" id="fencingDescription">
-            <span class="title">ФЕХТОВАНИЕ</span> <br>
-            Совершает два быстрых удара мечом. Если до этого действия был
-            применён "Выпад", урон от "Фехтования" увеличивается <br>
-            Расход стамины: 1 <br>
-            Урон: 15 <br>
-            Увеличенный урон: 20 <br>
-            Тип урона: <span class="physical">физический</span>
-          </p>
-
-          <p class="skillsDescriptions" id="circularStrikeDescription">
-            <span class="title">КРУГОВОЙ УДАР</span> <br>
-            Делает шаг вперёд, совершая круговой удар мечом. Поражает также
-            миньнонов <br>
-            Расход стамины: 1 <br>
-            Урон: 15 <br>
-            Тип урона: <span class="physical">физический</span>
-          </p>
-
-          <p class="skillsDescriptions" id="piercingDescription">
-            <span class="title">ПРОНЗАНИЕ</span> <br>
-            Совершает пронзающий удар мечом. После применения этой способности,
-            в течение данного хода магический урон увеличивается <br>
-            Расход стамины: 1 <br>
-            Урон: 10 <br>
-            Увеличение урона: 20% <br>
-            Тип урона: <span class="physical">физический</span>
-          </p>
-
-          <p class="skillsDescriptions" id="rageDescription">
-            <span class="title">ЯРОСТЬ</span> <br>
-            Если все действия за ход являлись атакой уроном физического типа, в
-            следующем ходу физический урон увеличивается <br>
-            Увеличение урона: 20%
-          </p>
-
-          <p class="skillsDescriptions" id="shadowStrikeDescription">
-            <span class="title">ТЕНЕВОЙ УДАР</span> <br>
-            Окружает себя тьмой, сливаясь с ней, и, неожиданно выйдя из
-            маскировки, совершает сокрушительный удар. Если до этого действия
-            было применено "Пронзание", урон от "Теневого удара" увеличивается
-            <br>
-            Расход стамины: 1 <br>
-            Урон: 20 <br>
-            Увеличенный урон: 25 <br>
-            Тип урона: <span class="physical">физический</span>
-          </p>
-
-          <p class="skillsDescriptions" id="fireStrikeDescription">
-            <span class="title">ОГНЕННЫЙ УДАР</span> <br>
-            Меч Кровы окаймляет огонь, после чего Крова наносит удар. Если до
-            этого было применено "Пронзание", вместо одного эффекта
-            накладывается два <br>
-            Расход стамины: 1 <br>
-            Урон: 10 <br>
-            Накладываемый эффект: огонь <br>
-            Тип урона: <span class="physical">физический</span>
-          </p>
-
-          <p class="skillsDescriptions" id="blessDescription">
-            <span class="title">БЛАГОСЛАВЕНИЕ</span> <br>
-            Взывает к кровавой луне, получая щит, блокирующий весь физический
-            урон следующей вражеской атаки. Не блокирует накладываемые эффекты
-            <br>
-            Расход стамины: 1 <br>
-            Прочность щита: 1 ход
-          </p>
-
-          <p class="skillsDescriptions" id="bloodMoonDescription">
-            <span class="title">КРОВАВАЯ ЛУНА</span> <br>
-            Взывает к кровавой луне, которая ударяет во врага испепеляющим лучом
-            <br>
-            Расход стамины: 2 <br>
-            Урон: 40 <br>
-            Тип урона: <span class="magic">магический</span>
-          </p>
+      <div id="skillsDescriptionContainerBackground">
+        <div id="skillsDescriptionContainer">
+          <button class="close"></button> 
+          <div id="skillsDescriptionTitle"></div>
+          <p id="skillsDescription"></p>
         </div>
       </div>
+
     </main>
 
     <footer>
       <span id="footerLine"> Игра создана пользователем под ником hsar </span>
     </footer>
-
-    <script src="scripts/main.js"></script>
   </body>
+  <script src="./scripts/character-skills.js"></script>
 </html>
