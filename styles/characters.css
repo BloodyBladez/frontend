@@ -210,7 +210,7 @@ p {
     background-image: url('../images/cross20.png');       /* Модальное окно */
   }
 
-p {
+.skillsDescriptions {
     display: none;
     position: fixed;
     text-align: left;
@@ -230,5 +230,5 @@ p {
 }
 
 .magic {
-    color: deepskyblue;
+    color: deepskyblue;           /* МАГ. ТИП УРОНА */
 }
