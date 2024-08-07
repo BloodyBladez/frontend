@@ -1,234 +1,232 @@
 .characters {
-    height: 200px;
-    width: 200px;
-    margin-left: -75px;
-    margin-right: 100px;
-    margin-top: 25px;
-    border: 5px solid black;       /* ВЫБОР ПЕРСОНАЖА */
-    border-radius: 5px;
+  height: 200px;
+  width: 200px;
+  margin-left: -75px;
+  margin-right: 100px;
+  margin-top: 25px;
+  border: 5px solid black; /* ВЫБОР ПЕРСОНАЖА */
+  border-radius: 5px;
 }
 
 .characters:hover {
-    border-color: red;              /* ВЫБОР ПЕРСОНАЖА */
-    cursor: pointer;
+  border-color: red; /* ВЫБОР ПЕРСОНАЖА */
+  cursor: pointer;
 }
 
 #Krova {
-    background-image: url('../images/krova2.jpg');    /* ВЫБОР ПЕРСОНАЖА */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
+  background-image: url("../images/krova2.jpg"); /* ВЫБОР ПЕРСОНАЖА */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #Aris {
-    background-image: url('../images/aris2.jpg');      /* ВЫБОР ПЕРСОНАЖА */
-    background-repeat: no-repeat; 
-    background-size: cover;
+  background-image: url("../images/aris2.jpg"); /* ВЫБОР ПЕРСОНАЖА */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .abilities {
-    float: left;
-    height: 440px;
-    width: 1470px;
-    border-radius: 30px 30px 0 0;
-    border: 5px solid blueviolet;                 /* МЕНЮ ПЕРСОНАЖА */
+  float: left;
+  height: 440px;
+  width: 1470px;
+  border-radius: 30px 30px 0 0;
+  border: 5px solid blueviolet; /* МЕНЮ ПЕРСОНАЖА */
 }
 
 .bio {
-    float: left;
-    height: 290px;
-    width: 970px;
-    border-radius: 0 0 0 30px;
-    border: 5px solid blueviolet;                  /* МЕНЮ ПЕРСОНАЖА */
+  float: left;
+  height: 290px;
+  width: 970px;
+  border-radius: 0 0 0 30px;
+  border: 5px solid blueviolet; /* МЕНЮ ПЕРСОНАЖА */
 }
 
 .characteristics {
-    float: left;
-    height: 290px;
-    width: 490px;
-    font-size: 2.69em;
-    color: white;
-    -webkit-text-stroke-width: 0.9px;
-    -webkit-text-stroke-color: black;               /* МЕНЮ ПЕРСОНАЖА */
-    text-align: left;
-    border-radius: 0 0 30px 0;
-    border: 5px solid blueviolet;
+  float: left;
+  height: 290px;
+  width: 490px;
+  font-size: 2.69em;
+  color: white;
+  -webkit-text-stroke-width: 0.9px;
+  -webkit-text-stroke-color: black; /* МЕНЮ ПЕРСОНАЖА */
+  text-align: left;
+  border-radius: 0 0 30px 0;
+  border: 5px solid blueviolet;
 }
 
 p {
-    margin-left: 20px;                             /* МЕНЮ ПЕРСОНАЖА */
+  margin-left: 20px; /* МЕНЮ ПЕРСОНАЖА */
 }
 
 #backgroundCharacters {
-    margin: 0;
-    padding: 0;
-    float: left;
-    height: 750px;
-    width: 1480px;
-    margin-left: 280px;
-    margin-top: 30px;
-    border-radius: 30px;
-    background-image: url('../images/backgroundCharacters.jpeg');      /* МЕНЮ ПЕРСОНАЖА */
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+  margin: 0;
+  padding: 0;
+  float: left;
+  height: 750px;
+  width: 1480px;
+  margin-left: 280px;
+  margin-top: 30px;
+  border-radius: 30px;
+  background-image: url("../images/backgroundCharacters.jpeg"); /* МЕНЮ ПЕРСОНАЖА */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #character2 {
-    margin-top: -110px;
-    margin-left: -1880px;  
-    padding-left: 0;                       /* МАНЕКЕН */
+  margin-top: -110px;
+  margin-left: -1880px;
+  padding-left: 0; /* МАНЕКЕН */
 }
 
 .abilitiesButtons {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    margin-top: 10px;                       /* СПОСОБНОСТИ */
-    margin-bottom: 10px;
-    margin-right: 112px;
-    margin-left: 10px;
-    border: 3px solid black;                 
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 10px; /* СПОСОБНОСТИ */
+  margin-bottom: 10px;
+  margin-right: 112px;
+  margin-left: 10px;
+  border: 3px solid black;
 }
 
 .abilitiesButtons:hover {
-    border-color: red;                    /* СПОСОБНОСТИ */
-    cursor: pointer;
+  border-color: red; /* СПОСОБНОСТИ */
+  cursor: pointer;
 }
 
 .lustAbilitiesButtons {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;                     /* СПОСОБНОСТИ */
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 0px;
-    margin-left: 10px;
-    border: 3px solid black;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%; /* СПОСОБНОСТИ */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+  border: 3px solid black;
 }
 
-.lustAbilitiesButtons:hover {               /* СПОСОБНОСТИ */
-    border-color: red;
-    cursor: pointer;
+.lustAbilitiesButtons:hover {
+  /* СПОСОБНОСТИ */
+  border-color: red;
+  cursor: pointer;
 }
 
 .passivButton {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    margin-left: 100px;                   /* СПОСОБНОСТИ */
-    padding-top: 50px;
-    border: 3px solid black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-left: 100px; /* СПОСОБНОСТИ */
+  padding-top: 50px;
+  border: 3px solid black;
 }
 
-.passivButton:hover {    
-    border-color: red;                  /* СПОСОБНОСТИ */
-    cursor: pointer;  
+.passivButton:hover {
+  border-color: red; /* СПОСОБНОСТИ */
+  cursor: pointer;
 }
 
-.lowabilitiesButtons { 
-    margin-left: 112px;
-    margin-right: 10px;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;                         /* СПОСОБНОСТИ */
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 3px solid black;
-
+.lowabilitiesButtons {
+  margin-left: 112px;
+  margin-right: 10px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%; /* СПОСОБНОСТИ */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 3px solid black;
 }
 
 .lowabilitiesButtons:hover {
-    border-color: red;                        /* СПОСОБНОСТИ */
-    cursor: pointer;
+  border-color: red; /* СПОСОБНОСТИ */
+  cursor: pointer;
 }
 
 .firstButton {
-    margin-left: 171px;
-    margin-right: 10px;
-    height: 200px;                            /* СПОСОБНОСТИ */
-    width: 200px;
-    border-radius: 50%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 3px solid black;
+  margin-left: 171px;
+  margin-right: 10px;
+  height: 200px; /* СПОСОБНОСТИ */
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 3px solid black;
 }
 
 .firstButton:hover {
-    border-color: red;
-    cursor: pointer;                          /* СПОСОБНОСТИ */
+  border-color: red;
+  cursor: pointer; /* СПОСОБНОСТИ */
 }
 
 #lunge {
-    background-image: url('../images/lunge.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;                                /* ПЕРВАЯ СПОСОБНОСТЬ */
-    background-position: center;
+  background-image: url("../images/lunge.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; /* ПЕРВАЯ СПОСОБНОСТЬ */
+  background-position: center;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;                                           /* Модальное окно */
-    width: 100%; 
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4); 
-  }
-  
-  .modal-content {
-    height: 740px;
-    width: 1470px;
-    margin-left: 380px;
-    margin-top: 110px;
-    border-radius: 30px;
-    background-image: url('../images/backgroundCharacters.jpeg');      /* Модальное окно */
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 5px solid blueviolet;
-    color: white;
-  }
-  
-  .close {     
-     border-radius: 50%;
-     background-color: transparent;
-     background-image: url('../images/cross2.png');    /* Модальное окно */
-     background-repeat: no-repeat;
-     background-size: cover;
-     height: 70px;
-     width: 70px;
-     margin-left: 5px;
-     margin-top: 5px;
-     border-width: 0;
-     cursor: pointer;
-  }
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0; /* Модальное окно */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
-  .close:hover {
-    background-image: url('../images/cross20.png');       /* Модальное окно */
-  }
+.modal-content {
+  height: 740px;
+  width: 1470px;
+  margin-left: 380px;
+  margin-top: 110px;
+  border-radius: 30px;
+  background-image: url("../images/backgroundCharacters.jpeg"); /* Модальное окно */
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 5px solid blueviolet;
+  color: white;
+}
+
+.close {
+  border-radius: 50%;
+  background-color: transparent;
+  background-image: url("../images/cross2.png"); /* Модальное окно */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70px;
+  width: 70px;
+  margin-left: 5px;
+  margin-top: 5px;
+  border-width: 0;
+  cursor: pointer;
+}
+
+.close:hover {
+  background-image: url("../images/cross20.png"); /* Модальное окно */
+}
 
 .skillsDescriptions {
-    display: none;
-    position: fixed;
-    text-align: left;
-    width: 1370px;                /* ТЕКСТ В ОКНАХ СПОСОБНОСТЕЙ */
-    margin-top: -70px;
-    font-size: 3.5em;
-    margin-left: 75px;
-    margin-top: 0px;
+  display: none;
+  position: fixed;
+  text-align: left;
+  width: 1370px; /* ТЕКСТ В ОКНАХ СПОСОБНОСТЕЙ */
+  margin-top: -70px;
+  font-size: 3.5em;
+  margin-left: 75px;
+  margin-top: 0px;
 }
 
 .title {
-    font-size: 100px;           /* ЗАГОЛОВОК В ОКНАХ СПОСОБНОСТЕЙ */
+  font-size: 100px; /* ЗАГОЛОВОК В ОКНАХ СПОСОБНОСТЕЙ */
 }
 
 .physical {
-    color: rgb(172, 57, 11);      /* ФИЗ. ТИП УРОНА */
+  color: rgb(172, 57, 11); /* ФИЗ. ТИП УРОНА */
 }
 
 .magic {
-    color: deepskyblue;           /* МАГ. ТИП УРОНА */
+  color: deepskyblue; /* МАГ. ТИП УРОНА */
 }
