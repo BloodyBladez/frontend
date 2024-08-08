@@ -1,0 +1,36 @@
+.abilitiesButton {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 10px; /* СПОСОБНОСТИ */
+    margin-bottom: 10px;
+    margin-right: 112px;
+    margin-left: 10px;
+    border: 3px solid black;
+  }
+  
+  .abilitiesButton:hover {
+    border-color: red; /* СПОСОБНОСТИ */
+    cursor: pointer;
+  }
+  
+  .passiveButton {
+    margin-right: 0px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+  }
+  
+  .abilitiesRow1 {}
+  .abilitiesRow2 {
+    padding-left: 10%;
+  }
+
+  #ab_lunge {
+    background-image: url("../images/lunge.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* ПЕРВАЯ СПОСОБНОСТЬ */
+    background-position: center;
+  }
+  
