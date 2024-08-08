@@ -1,0 +1,79 @@
+#character1 {
+    float: left;
+    margin-top: 0px;
+    margin-left: 80;
+    padding-left: 0; /* МАНЕКЕН */
+  }
+  
+  .button {
+    background-color: blueviolet; /* КНОПКИ */
+    height: 100px;
+    width: 400px;
+    margin-left: 390px;
+    margin-top: 50px;
+    border-radius: 30px;
+    border: 5px solid black;
+    text-align: center;
+    line-height: 90px;
+    font-size: 4em;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  #store {
+    background-image: url("../images/store10.jpg");
+    background-position: left;
+  }
+  
+  #store:hover {
+    background-image: url("../images/store20.jpg");
+    color: red;
+    border-color: red;
+  }
+  
+  #character {
+    background-image: url("../images/camp10.jpg");
+    background-position: center;
+  }
+  
+  #character:hover {
+    background-image: url("../images/camp20.jpg");
+    color: red;
+    border-color: red;
+  }
+  
+  #battle {
+    background-image: url("../images/battle10.jpg");
+    background-position: center;
+  }
+  
+  #battle:hover {
+    background-image: url("../images/battle20.jpg");
+    color: red;
+    border-color: red;
+  }
+  
+  #castle {
+    background-image: url("../images/castle10.jpg");
+    background-position: bottom;
+  }
+  
+  #castle:hover {
+    background-image: url("../images/castle20.jpg");
+    color: red;
+    border-color: red;
+  }
+  
+  #court {
+    background-image: url("../images/court10.jpg");
+    background-position: center;
+  }
+  
+  #court:hover {
+    background-image: url("../images/court20.jpg");
+    color: red;
+    border-color: red;
+  }

@@ -1,0 +1,48 @@
+.abilities {
+  float: left;
+  height: 440px;
+  width: 1470px;
+  border-radius: 30px 30px 0 0;
+  border: 5px solid blueviolet; /* МЕНЮ ПЕРСОНАЖА */
+}
+
+.bio {
+  float: left;
+  height: 290px;
+  width: 970px;
+  border-radius: 0 0 0 30px;
+  border: 5px solid blueviolet; /* МЕНЮ ПЕРСОНАЖА */
+}
+
+.characteristics {
+  float: left;
+  height: 290px;
+  width: 490px;
+  font-size: 2.69em;
+  color: white;
+  -webkit-text-stroke-width: 0.9px;
+  -webkit-text-stroke-color: black; /* МЕНЮ ПЕРСОНАЖА */
+  text-align: left;
+  border-radius: 0 0 30px 0;
+  border: 5px solid blueviolet;
+}
+
+#backgroundCharacters {
+    margin: 0;
+    padding: 0;
+    float: left;
+    height: 750px;
+    width: 1480px;
+    margin-left: 280px;
+    margin-top: 30px;
+    border-radius: 30px;
+    background-image: url("../images/backgroundCharacters.jpeg"); /* МЕНЮ ПЕРСОНАЖА */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  #character2 {
+    margin-top: -110px;
+    margin-left: -1880px;
+    padding-left: 0; /* МАНЕКЕН */
+  }
