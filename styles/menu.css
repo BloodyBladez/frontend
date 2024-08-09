@@ -22,18 +22,7 @@
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
   }
-  
-  #store {
-    background-image: url("../images/store10.jpg");
-    background-position: left;
-  }
-  
-  #store:hover {
-    background-image: url("../images/store20.jpg");
-    color: red;
-    border-color: red;
-  }
-  
+
   #character {
     background-image: url("../images/camp10.jpg");
     background-position: center;
