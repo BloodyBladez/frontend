@@ -25,3 +25,9 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  #Muni {
+    background-image: url("../images/Muni-Beta15.jpg"); /* ВЫБОР ПЕРСОНАЖА */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
