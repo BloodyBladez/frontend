@@ -1,3 +1,5 @@
+secret.json
+
 # Logs
 logs
 *.log
@@ -59,6 +61,8 @@ web_modules/
 
 # Microbundle cache
 .rpt2_cache/
+**/secret.json
+
 .rts2_cache_cjs/
 .rts2_cache_es/
 .rts2_cache_umd/
