@@ -1,0 +1,18 @@
+{
+    "exclude": [
+        "./dist/",
+        "./node_modules/",
+    ],
+    "compilerOptions": {
+        "allowJs": true,
+        "alwaysStrict": true,
+        "checkJs": true,
+        "importHelpers": true,
+        "rootDir": "./src/",
+        "outDir": "./dist/",
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "NodeNext",
+        "lib": ["ESNext"]
+    }
+}
