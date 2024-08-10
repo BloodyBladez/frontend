@@ -1,0 +1,53 @@
+.buttons
+  margin-top 20px
+  display flex
+  flex-direction column
+  box-sizing border-box
+  gap 18px
+  justify-content center
+  align-items center
+  color white
+
+.buttons > a
+  display flex
+  justify-content center
+  height 100px
+  width 400px
+  font-size 4em
+  align-items center
+  border-radius: 30px;
+  border 5px solid black
+  cursor pointer
+  -webkit-text-stroke-width 2px
+  -webkit-text-stroke-color black
+  transition border-color .3s ease
+  &:hover
+    color red
+    border-color red
+
+.buttons > a
+  text-decoration none
+
+.buttons > a:visited
+  color inherit
+
+menu_button(name, pos)
+  background-image url('/menu/' + name + '10.jpg')
+  background-position pos
+  &:hover
+    background-image url('/menu/' + name + '20.jpg')
+
+.court
+  menu_button('court', left)
+
+.castle
+  menu_button('castle', bottom)
+
+.battle
+  menu_button('battle', center)
+
+.character
+  menu_button('camp', center)
+
+.store
+  menu_button('store', left)

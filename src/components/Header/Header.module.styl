@@ -1,0 +1,43 @@
+preset =
+  display flex
+  gap 5px
+  align-items center
+
+.header
+  display flex
+  background black
+  align-items center
+  justify-content space-between
+  padding 5px
+
+.left
+  text-decoration none
+  {preset}
+
+.right > a:visited, .left
+  color inherit
+
+.right
+  {preset}
+
+.right > a
+  width 40px
+  height 40px
+  cursor pointer
+
+.name
+  color white
+  font-size 2em
+
+header_button(id)
+  background-image url("/header/" + id + ".png")
+  background-repeat no-repeat
+  background-size cover
+  &:hover
+    background-image url("/header/" + id + "20.png")
+
+.settings
+  header_button('settings')
+
+.profile
+  header_button('profile')
