@@ -12,18 +12,24 @@ preset =
 
 .left
   text-decoration none
-  {preset}
-
-.right > a:visited, .left
   color inherit
+  {preset}
 
 .right
   {preset}
+
+animation_length = .3s
 
 .right > a
   width 40px
   height 40px
   cursor pointer
+  background-repeat no-repeat
+  background-size cover
+  transition filter animation_length ease
+
+  &:visited
+    color inherit
 
 .name
   color white
@@ -31,10 +37,8 @@ preset =
 
 header_button(id)
   background-image url("/header/" + id + ".png")
-  background-repeat no-repeat
-  background-size cover
   &:hover
-    background-image url("/header/" + id + "20.png")
+    filter brightness(50%)
 
 .settings
   header_button('settings')

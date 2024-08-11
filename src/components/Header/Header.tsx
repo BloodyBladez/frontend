@@ -13,15 +13,11 @@ class Header extends Component {
                     className={styles.left}
                 >
                     <img
-                        src="/logo.png"
+                        src="/logo.webp"
                         alt="Logotype"
                         height={40}
                         className={styles.logo}
                     />
-
-                    <div className={styles.name}>
-                        __APP_NAME__
-                    </div>
                 </Link>
 
                 <div className={styles.right}>
