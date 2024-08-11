@@ -1,14 +1,13 @@
 import {Component} from "preact";
 import {Link} from "wouter-preact";
-import styles from "./Home.module.styl";
+import styles from "./Menu.module.styl";
 
 class Menu extends Component {
     elements = [
         ['court', 'Обучение'],
         ['castle', 'Кампания'],
         ['battle', 'Сражения'],
-        ['character', 'Персонажи'],
-        ['store', 'Магазин']
+        ['character', 'Персонажи']
     ];
 
     render() {
@@ -19,7 +18,7 @@ class Menu extends Component {
                         to=""
                         className={styles[id]}
                     >
-                        {name}
+                        <div className={styles.text}>{name}</div>
                     </Link>
                 )}
             </div>
