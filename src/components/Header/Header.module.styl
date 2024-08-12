@@ -1,0 +1,38 @@
+preset =
+  display flex
+  gap 5px
+  align-items center
+
+.header
+  display flex
+  background rgb(29, 24, 24)
+  align-items center
+  justify-content space-between
+  padding 5px
+
+.left
+  text-decoration none
+  color inherit
+  {preset}
+
+.right
+  {preset}
+
+animation_length = .3s
+
+.right > a
+  width 40px
+  height 40px
+  cursor pointer
+  background var(--image) no-repeat center/cover;
+  transition filter animation_length ease
+
+  &:visited
+    color inherit
+
+  &:hover
+    filter brightness(50%)
+
+.name
+  color white
+  font-size 2em

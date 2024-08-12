@@ -1,58 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="author" content="Hsar" />
-    <meta
-      name="description"
-      content="Text Fighting - браузерная игра в жанре файтинга. 
-      Тебя ждёт много контента: разные персонажи со своими способностями, сильными и слабыми 
-      сторонами, которых можно будет покупать в магазине. Карточный геймплей, где важна будет 
-      тактика, а также удача. ПВЕ и ПВП режимы. Надёжная связь с разработчиком, у игры есть свой дискорд 
-      сервер."
-    />
-    <title>Text Fighting</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="mirdukkkkk">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BloodyBladez</title>
 
-    <link rel="stylesheet" href="styles-GLOBAL/global.css" />
-    <link rel="stylesheet" href="styles-GLOBAL/header.css" />
-    <link rel="stylesheet" href="styles-INDEX/menu.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="images/Warrior2.jpg" />
-  </head>
-
-  <body>
-    <header>
-      <img
-        src="images/logo4.png"
-        alt="logo"
-        height="70px"
-        width="auto"
-        id="logo"
-      />
-      <a href="profile.html"> <button id="profile"></button> </a>
-      <button id="settings"></button>
-
-      <div id="ProjectName">Text Fighting</div>
-    </header>
-
-    <img
-      src="images/character2B.png"
-      id="character1"
-      height="700px"
-      width="245px"
-    />
-
-    <a href=""><button class="button" id="court">Обучение</button></a>
-    <a href=""><button class="button" id="castle">Кампания</button></a>
-    <a href=""><button class="button" id="battle">Сражение</button></a>
-    <a href="characters.html">
-      <button class="button" id="character">Персонажи</button>
-    </a>
-  </body>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game"></div>
+    <script type="module" src="src/index.tsx"></script>
+</body>
 </html>
