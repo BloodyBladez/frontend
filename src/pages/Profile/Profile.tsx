@@ -43,10 +43,9 @@ class Profile extends Component {
         const target = event.target as HTMLInputElement;
         if(target.files && target.files[0]) {
             const file = target.files[0];
-            console.log(file.type);
-            if(file.size > 4194304) return alert('Файл слишком большой');
-            const data = await new Image(await file.arrayBuffer())
-                .process(file.type, 200, 200);
+            if(file.size > 8388608) return alert('Файл слишком большой');
+            const data = await new Image(file.type, await file.arrayBuffer())
+                .process(200, 200);
             this.setState({ avatarPreview: data });
             this.context.setAvatar(data);
         }
