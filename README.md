@@ -1,6 +1,6 @@
 <div align="center" >
 <img 
-    alt="PixelBattle logo" 
+    alt="BloodyBladez logo" 
     src="./public/logo.webp"
 >
 <br>

@@ -21,10 +21,12 @@ class Header extends Component {
                 </Link>
 
                 <div className={styles.right}>
-                    {this.buttons.map((label) =>
+                    {this.buttons.map((value) =>
                         <Link
-                            to={'/' + label}
-                            className={styles[label]}
+                            to={'/' + value}
+                            style={{
+                                '--image': `url("/header/${value}.png")`
+                            }}
                         />
                     )}
                 </div>

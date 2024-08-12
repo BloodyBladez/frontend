@@ -24,24 +24,15 @@ animation_length = .3s
   width 40px
   height 40px
   cursor pointer
-  background-repeat no-repeat
-  background-size cover
+  background var(--image) no-repeat center/cover;
   transition filter animation_length ease
 
   &:visited
     color inherit
 
-.name
-  color white
-  font-size 2em
-
-header_button(id)
-  background-image url("/header/" + id + ".png")
   &:hover
     filter brightness(50%)
 
-.settings
-  header_button('settings')
-
-.profile
-  header_button('profile')
+.name
+  color white
+  font-size 2em

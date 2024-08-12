@@ -16,7 +16,7 @@
   -webkit-text-stroke-width 2px
   -webkit-text-stroke-color black
 
-animation_length = .5s
+animation_length = .3s
 
 .buttons > a
   background black
@@ -44,26 +44,10 @@ animation_length = .5s
     width 100%
     height 100%
     transition opacity animation_length ease
+    background var(--image) var(--position)
 
   &:hover
     border-color red
 
   &:hover::before
     opacity 0.5
-
-menu_button(name, pos)
-  &::before
-    background-image url('/menu/' + name + '.jpg')
-    background-position pos
-
-.court
-  menu_button('court', left)
-
-.castle
-  menu_button('castle', bottom)
-
-.battle
-  menu_button('battle', center)
-
-.character
-  menu_button('camp', center)
