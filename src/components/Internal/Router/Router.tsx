@@ -1,5 +1,5 @@
 import {Switch,Route} from "wouter-preact";
-import routes from "./data/routes";
+import routes from "../../../data/routes";
 
 const Router = () => (
     <Switch>

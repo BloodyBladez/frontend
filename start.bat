@@ -16,6 +16,7 @@ if %errorlevel% equ 0 (
 )
 
 echo No supported package manager was found. Install Yarn or NPM to continue.
+pause
 exit /b
 
 :OpenBrowser

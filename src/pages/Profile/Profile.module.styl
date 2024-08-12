@@ -1,0 +1,76 @@
+.profile
+  display grid
+  grid-template-areas "left_panel stats"
+  grid-template-columns 1fr 2fr
+  grid-template-rows 1fr
+  height calc(100% - 50px)
+  box-sizing border-box
+  padding 10px
+  gap 10px
+  color white
+
+  @media screen and (max-width 800px)
+    grid-template-areas "left_panel" "stats"
+    grid-template-columns 1fr
+    grid-template-rows auto 1fr
+
+.profile > div
+  border 5px solid #3b3b3b
+  border-radius 25px
+
+.left_panel
+  padding 20px
+  grid-area left_panel
+  display flex
+  flex-direction column
+  align-items center
+  gap 15px
+  flex-wrap nowrap
+  & > img
+    border-radius 50%
+
+.left_panel > img
+  cursor pointer
+
+.left_panel > input
+  display none
+
+nickname_size = clamp(24px, 5vw, 50px)
+
+.nickname
+  display flex
+  flex-direction row
+  gap 10px
+  align-items center
+  white-space nowrap
+
+.nickname > input
+  appearance none
+  border none
+  background none
+  outline none
+  font-size nickname_size
+  color white
+  text-align center
+  box-sizing border-box
+  width 100%
+
+.nickname > div
+  overflow hidden
+  font-size nickname_size
+  text-overflow ellipsis
+  display inline-block
+  white-space nowrap
+
+.nickname > img
+  background #3b3b3b
+  border-radius 15px
+  padding 6px
+
+.stats
+  display flex
+  grid-area stats
+  align-items center
+  justify-content center
+  font-size 24px
+  padding 20px

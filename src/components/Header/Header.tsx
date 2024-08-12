@@ -23,6 +23,7 @@ class Header extends Component {
                 <div className={styles.right}>
                     {this.buttons.map((value) =>
                         <Link
+                            key={value}
                             to={'/' + value}
                             style={{
                                 '--image': `url("/header/${value}.png")`

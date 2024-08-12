@@ -31,6 +31,7 @@ class Menu extends Component {
             <div className={styles.buttons}>
                 {this.elements.map(({ id, name, position }) =>
                     <Link
+                        key={id}
                         to={'/' + id}
                         style={{
                             '--image': `url("/menu/${id}.jpg")`,
