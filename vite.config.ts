@@ -1,24 +1,22 @@
 import {defineConfig} from "vite";
 import preact from "@preact/preset-vite";
-import replace from "@rollup/plugin-replace";
 
 import {resolve} from "path";
+
+import variables from "./src/styles/variables";
 
 export default defineConfig({
     plugins: [
         preact({
             devToolsEnabled: true,
             devtoolsInProd: false
-        }),
-        replace({
-            __APP_NAME__: 'BloodyBladez',
-            preventAssignment: true
         })
     ],
     build: {
         rollupOptions: {
             input: {
                 menu: resolve(__dirname, 'index.html'),
+                profile: resolve(__dirname, 'profile.html'),
                 character: resolve(__dirname, 'character.html')
             },
             output: {
@@ -33,5 +31,15 @@ export default defineConfig({
         modulePreload: true,
         cssMinify: 'lightningcss',
         minify: 'esbuild'
+    },
+    css: {
+        preprocessorOptions: {
+            styl: {
+                compress: true,
+                additionalData: variables.map(([name, value]) =>
+                    `$${name} = ${value}`
+                ).join('\n')
+            }
+        }
     }
 });

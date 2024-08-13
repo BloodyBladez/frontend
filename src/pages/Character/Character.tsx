@@ -1,11 +1,3 @@
-import {Component} from "preact";
-
-class Character extends Component {
-    render() {
-        return (
-            <></>
-        );
-    }
-}
+const Character = () => <></>;
 
 export default Character;

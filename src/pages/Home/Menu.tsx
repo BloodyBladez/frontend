@@ -1,9 +1,8 @@
-import {Component} from "preact";
 import {Link} from "wouter-preact";
 import styles from "./Menu.module.styl";
 
-class Menu extends Component {
-    elements = [
+const Menu = () => {
+    const elements = [
         {
             id: 'court',
             name: 'Обучение',
@@ -26,24 +25,22 @@ class Menu extends Component {
         }
     ];
 
-    render() {
-        return (
-            <div className={styles.buttons}>
-                {this.elements.map(({ id, name, position }) =>
-                    <Link
-                        key={id}
-                        to={'/' + id}
-                        style={{
-                            '--image': `url("/menu/${id}.jpg")`,
-                            '--position': position
-                        }}
-                    >
-                        <div className={styles.text}>{name}</div>
-                    </Link>
-                )}
-            </div>
-        );
-    }
+    return (
+        <div className={styles.buttons}>
+            {elements.map(({id, name, position}) =>
+                <Link
+                    key={id}
+                    to={'/' + id}
+                    style={{
+                        '--image': `url("/menu/${id}.jpg")`,
+                        '--position': position
+                    }}
+                >
+                    <div className={styles.text}>{name}</div>
+                </Link>
+            )}
+        </div>
+    );
 }
 
 export default Menu;

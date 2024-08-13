@@ -3,28 +3,32 @@ import {signal, type Signal} from "@preact/signals";
 import LocalStorage, {type Profile} from "../classes/LocalStorage";
 
 export const ProfileManager = {
-    data: signal({}) as Signal<Profile>,
+    nickname: signal('') as Signal<Profile['nickname']>,
+    avatar: signal('') as Signal<Profile['avatar']>,
     setNickname(nickname: string) {
-        ProfileManager.data.value.nickname = nickname;
+        ProfileManager.nickname.value = nickname;
         ProfileManager.save();
     },
     setAvatar(avatar: string) {
-        ProfileManager.data.value.avatar = avatar;
+        ProfileManager.avatar.value = avatar;
         ProfileManager.save();
     },
     load() {
         const data = LocalStorage.get('profile');
+        const base = { nickname: '', avatar: '' };
 
-        ProfileManager.data.value = data ?? {
-            avatar: "",
-            nickname: ""
-        }
+        ProfileManager.nickname.value = data?.nickname ?? base.nickname;
+        ProfileManager.avatar.value = data?.avatar ?? base.avatar;
 
         if(!data) ProfileManager.save();
     },
     save() {
-        if(!ProfileManager.data.value) throw new Error('Saving profile not found in localStorage');
-        LocalStorage.set('profile', ProfileManager.data.value);
+        const data = {
+            nickname: ProfileManager.nickname.value,
+            avatar: ProfileManager.avatar.value
+        }
+
+        LocalStorage.set('profile', data);
     }
 }
 

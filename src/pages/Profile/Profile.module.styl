@@ -15,8 +15,7 @@
     grid-template-rows auto 1fr
 
 .profile > div
-  border 5px solid #3b3b3b
-  border-radius 25px
+  {$border}
 
 .left_panel
   padding 20px
@@ -35,7 +34,7 @@
 .left_panel > input
   display none
 
-nickname_size = clamp(24px, 5vw, 50px)
+nickname_size = clamp(24px, 44px, 50px)
 
 .nickname
   display flex
@@ -63,7 +62,7 @@ nickname_size = clamp(24px, 5vw, 50px)
   white-space nowrap
 
 .nickname > img
-  background #3b3b3b
+  background $additional-color
   border-radius 15px
   padding 6px
 
