@@ -1,12 +1,20 @@
 import {defineConfig} from "vite";
-import preact from "@preact/preset-vite";
-
 import {resolve} from "path";
+import preact from "@preact/preset-vite";
+import alias from "@rollup/plugin-alias";
 
 import variables from "./src/styles/variables";
 
 export default defineConfig({
     plugins: [
+        alias({
+            entries: [
+                {
+                    find: '@',
+                    replacement: resolve(__dirname, 'src', 'components')
+                }
+            ]
+        }),
         preact({
             devToolsEnabled: true,
             devtoolsInProd: false

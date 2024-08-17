@@ -17,6 +17,7 @@
   "private": true,
   "devDependencies": {
     "@preact/preset-vite": "^2.9.0",
+    "@rollup/plugin-alias": "^5.1.0",
     "@types/node": "^22.2.0",
     "lightningcss": "^1.26.0",
     "stylus": "^0.63.0",

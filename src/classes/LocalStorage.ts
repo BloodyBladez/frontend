@@ -3,8 +3,14 @@ export interface Profile {
     avatar: string;
 }
 
+export interface Host {
+    selected: string;
+    list: string[];
+}
+
 export interface LocalStorageMap {
     profile?: Profile;
+    host?: Host;
 }
 
 class LocalStorage {

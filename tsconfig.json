@@ -15,7 +15,8 @@
     "types": ["node"],
     "paths": {
       "react": ["./node_modules/preact/compat/"],
-      "react-dom": ["./node_modules/preact/compat/"]
+      "react-dom": ["./node_modules/preact/compat/"],
+      "@": ["./src/components"]
     },
     "removeComments": true
   },

@@ -1,7 +1,7 @@
 import {Link} from "wouter-preact";
 import styles from "./Header.module.styl";
 
-const Header = () => {
+export const Header = () => {
     const buttons = ['profile', 'settings'];
 
     return (
@@ -32,5 +32,3 @@ const Header = () => {
         </header>
     );
 }
-
-export default Header;

@@ -1,7 +1,6 @@
 import {useContext} from "preact/hooks";
 import {ProfileContext} from "../../managers/profile";
-import AvatarChangeable from "../../components/Avatar/AvatarChangeable";
-import NicknameChangeable from "../../components/Nickname/NicknameChangeable";
+import {AvatarChangeable, NicknameChangeable} from "@";
 import styles from "./Profile.module.styl";
 
 const Profile = () => {

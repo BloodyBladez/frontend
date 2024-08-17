@@ -6,7 +6,7 @@ export type AvatarProps = HTMLAttributes<HTMLImageElement> & {
     onSave: (url: string) => any;
 }
 
-const AvatarChangeable = ({ src, width = 200, height = 200, onSave }: AvatarProps) => {
+export const AvatarChangeable = ({ src, width = 200, height = 200, onSave }: AvatarProps) => {
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     return (
@@ -43,5 +43,3 @@ const AvatarChangeable = ({ src, width = 200, height = 200, onSave }: AvatarProp
         </>
     );
 }
-
-export default AvatarChangeable

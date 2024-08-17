@@ -1,6 +1,7 @@
 import type {RefObject} from "preact";
 import {type Signal} from "@preact/signals";
 import {useEffect, useRef, useState} from "preact/hooks";
+import {TextField} from "../";
 
 export type NicknameProps = {
     value: Signal<string> | string;
@@ -8,7 +9,7 @@ export type NicknameProps = {
     className?: string;
 }
 
-const NicknameChangeable = ({ value, onSave, className }: NicknameProps) => {
+export const NicknameChangeable = ({ value, onSave, className }: NicknameProps) => {
     const inputRef = useRef<HTMLInputElement | HTMLDivElement>(null);
     const [isEditing, setIsEditing] = useState(false);
 
@@ -21,20 +22,12 @@ const NicknameChangeable = ({ value, onSave, className }: NicknameProps) => {
     return (
         <div className={className}>
             {isEditing ? (
-                <input
+                <TextField
                     type="text"
                     ref={inputRef as RefObject<HTMLInputElement>}
                     value={value}
-                    onInput={(event) => onSave(
-                        (event.target as HTMLInputElement)
-                            .value
-                    )}
-                    onBlur={() => setIsEditing(false)}
-                    onKeyDown={(e) => {
-                        if (e.key === 'Enter') {
-                            setIsEditing(false);
-                        }
-                    }}
+                    onSave={(str) => onSave(str)}
+                    onUnFocus={() => setIsEditing(false)}
                     minLength={2}
                     maxLength={20}
                 />
