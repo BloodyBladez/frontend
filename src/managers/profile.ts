@@ -1,10 +1,13 @@
 import {createContext} from "preact";
-import {signal, type Signal} from "@preact/signals";
+import {computed, type ReadonlySignal, signal, type Signal} from "@preact/signals";
 import LocalStorage, {type Profile} from "../classes/LocalStorage";
+import config from "../config";
 
 export const ProfileManager = {
     nickname: signal('') as Signal<Profile['nickname']>,
     avatar: signal('') as Signal<Profile['avatar']>,
+    fixedNickname: computed(() => '') as ReadonlySignal<Profile['nickname']>,
+    fixedAvatar: computed(() => '') as ReadonlySignal<Profile['avatar']>,
     setNickname(nickname: string) {
         ProfileManager.nickname.value = nickname;
         ProfileManager.save();
@@ -31,5 +34,16 @@ export const ProfileManager = {
         LocalStorage.set('profile', data);
     }
 }
+
+ProfileManager.fixedNickname = computed(() =>
+    ProfileManager.nickname.value !== ''
+        ? ProfileManager.nickname.value
+        : config.default.nickname
+);
+ProfileManager.fixedAvatar = computed(() =>
+    ProfileManager.avatar.value !== ''
+        ? ProfileManager.avatar.value
+        : config.default.avatar
+);
 
 export const ProfileContext = createContext({} as typeof ProfileManager);

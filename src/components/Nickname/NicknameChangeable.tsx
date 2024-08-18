@@ -1,10 +1,10 @@
 import type {RefObject} from "preact";
 import {type Signal} from "@preact/signals";
 import {useEffect, useRef, useState} from "preact/hooks";
-import {TextField} from "../";
+import {TextField} from "@";
 
 export type NicknameProps = {
-    value: Signal<string> | string;
+    value: Signal<string>;
     onSave: (nickname: string) => any;
     className?: string;
 }
@@ -34,10 +34,7 @@ export const NicknameChangeable = ({ value, onSave, className }: NicknameProps) 
             ) : (
                 <>
                     <div ref={inputRef as RefObject<HTMLDivElement>}>
-                        {typeof value === 'object'
-                            ? value.value || 'Нет никнейма'
-                            : value
-                        }
+                        {value}
                     </div>
 
                     <img

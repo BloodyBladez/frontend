@@ -10,12 +10,12 @@ const Profile = () => {
         <div className={styles.profile}>
             <div className={styles.left_panel}>
                 <AvatarChangeable
-                    src={profile.avatar}
+                    src={profile.fixedAvatar}
                     onSave={profile.setAvatar}
                 />
 
                 <NicknameChangeable
-                    value={profile.nickname}
+                    value={profile.fixedNickname}
                     onSave={profile.setNickname}
                     className={styles.nickname}
                 />
