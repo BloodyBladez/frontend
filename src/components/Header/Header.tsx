@@ -3,6 +3,10 @@ import styles from "./Header.module.styl";
 
 export const Header = () => {
     const buttons = ['profile', 'settings'];
+    const iconsMap: Record<string, string> = {
+        profile: "/extra/user.svg",
+        settings: "/extra/settings.svg",
+    }
 
     return (
         <header className={styles.header}>
@@ -24,7 +28,7 @@ export const Header = () => {
                         key={value}
                         to={'/' + value}
                         style={{
-                            '--image': `url("/header/${value}.png")`
+                            '--image': `url("${iconsMap[value]}")`
                         }}
                     />
                 )}
