@@ -42,6 +42,7 @@ export const NicknameChangeable = ({ value, onSave, className }: NicknameProps) 
                         alt="Редактировать никнейм"
                         width={32}
                         height={32}
+                        style="cursor: pointer;"
                         onClick={() => setIsEditing(true)}
                     />
                 </>
