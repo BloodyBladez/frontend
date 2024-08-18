@@ -2,11 +2,10 @@ import {Link} from "wouter-preact";
 import styles from "./Header.module.styl";
 
 export const Header = () => {
-    const buttons = ['profile', 'settings'];
-    const iconsMap: Record<string, string> = {
-        profile: "/extra/user.svg",
-        settings: "/extra/settings.svg",
-    }
+    const buttons = [
+        ["profile", "/extra/user.svg"],
+        ["settings", "/extra/settings.svg"]
+    ];
 
     return (
         <header className={styles.header}>
@@ -23,12 +22,12 @@ export const Header = () => {
             </Link>
 
             <div className={styles.right}>
-                {buttons.map((value) =>
+                {buttons.map(([name, source]) =>
                     <Link
-                        key={value}
-                        to={'/' + value}
+                        key={name}
+                        to={'/' + name}
                         style={{
-                            '--image': `url("${iconsMap[value]}")`
+                            '--image': `url("${source}")`
                         }}
                     />
                 )}
