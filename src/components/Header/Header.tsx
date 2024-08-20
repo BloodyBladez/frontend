@@ -14,7 +14,7 @@ export const Header = () => {
                 className={styles.left}
             >
                 <img
-                    src="/logo.webp"
+                    src="/banners&icons/BB-Banner.webp"
                     alt="Logotype"
                     height={40}
                     className={styles.logo}
