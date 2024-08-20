@@ -1,5 +1,6 @@
-import {useContext} from "preact/hooks";
-import {HostContext} from "../../../managers/host";
+import { useContext } from "preact/hooks";
+import { HostContext } from "../../../managers/host";
+import { ServerRecord } from "@";
 import styles from "./ServerMap.module.styl";
 
 export const ServerMap = () => {
@@ -7,18 +8,9 @@ export const ServerMap = () => {
 
     return (
         <div className={styles.server_list}>
-            {host.list.value.map((hostname) =>
-                <div
-                    className={
-                        host.selected.value === hostname
-                            ? styles.selected
-                            : undefined
-                    }
-                    onClick={() => host.selected.value = hostname}
-                >
-                    {hostname}
-                </div>
-            )}
+            {Object.keys(host.list.value).map((hostname) => (
+                <ServerRecord>{hostname}</ServerRecord>
+            ))}
         </div>
     );
-}
+};

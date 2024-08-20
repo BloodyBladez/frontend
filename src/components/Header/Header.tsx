@@ -1,4 +1,4 @@
-import {Link} from "wouter-preact";
+import { Link } from "wouter-preact";
 import styles from "./Header.module.styl";
 
 export const Header = () => {
@@ -9,10 +9,7 @@ export const Header = () => {
 
     return (
         <header className={styles.header}>
-            <Link
-                to="/"
-                className={styles.left}
-            >
+            <Link to="/" className={styles.left}>
                 <img
                     src="/banners-icons/BB-Banner.webp"
                     alt="Logotype"
@@ -22,16 +19,16 @@ export const Header = () => {
             </Link>
 
             <div className={styles.right}>
-                {buttons.map(([name, source]) =>
+                {buttons.map(([name, source]) => (
                     <Link
                         key={name}
-                        to={'/' + name}
+                        to={"/" + name}
                         style={{
-                            '--image': `url("${source}")`
+                            "--image": `url("${source}")`
                         }}
                     />
-                )}
+                ))}
             </div>
         </header>
     );
-}
+};

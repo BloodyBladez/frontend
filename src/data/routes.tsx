@@ -5,19 +5,19 @@ import Character from "../pages/Character/Character";
 
 export default [
     {
-        path: '/',
+        path: "/",
         element: <Menu />
     },
     {
-        path: '/profile',
+        path: "/profile",
         element: <Profile />
     },
     {
-        path: '/battle',
+        path: "/battle",
         element: <Battle />
     },
     {
-        path: '/characters',
+        path: "/characters",
         element: <Character />
     }
 ];

@@ -1,8 +1,8 @@
-import {useEffect} from "preact/hooks";
+import { useEffect } from "preact/hooks";
 
-import {HostContext, HostManager} from "./managers/host";
-import {ProfileContext, ProfileManager} from "./managers/profile";
-import {Header, Router} from "@";
+import { HostContext, HostManager } from "./managers/host";
+import { ProfileContext, ProfileManager } from "./managers/profile";
+import { Header, Router } from "@";
 
 import "./styles/index.styl";
 
@@ -20,9 +20,8 @@ const App = () => {
                     <Router />
                 </ProfileContext.Provider>
             </HostContext.Provider>
-
         </>
     );
-}
+};
 
 export default App;

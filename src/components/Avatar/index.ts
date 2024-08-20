@@ -1,1 +1,1 @@
-export * from './AvatarChangeable';
+export * from "./AvatarChangeable";

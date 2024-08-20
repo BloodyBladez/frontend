@@ -1,6 +1,6 @@
-import {useContext} from "preact/hooks";
-import {HostContext} from "../../../managers/host";
-import {ServerMap, TextField} from "@";
+import { useContext } from "preact/hooks";
+import { HostContext } from "../../../managers/host";
+import { ServerMap, TextField } from "@";
 import styles from "./MutableServerList.module.styl";
 import config from "../../../config";
 
@@ -12,21 +12,29 @@ export const MutableServerList = () => {
             <ServerMap />
 
             <TextField
-                className={styles.server}
-                onSave={(value) => host.selected.value = value}
+                className={styles.typer}
+                onSave={(value) => (host.selected.value = value)}
                 onUnFocus={(target) => {
                     const { value } = target;
-                    if(value !== '') {
-                        if(config.validation.host.test(value)) {
-                            const hostname = value.includes('//')
-                                ? value.split('//')[1]
+                    if (value !== "") {
+                        if (config.validation.host.test(value)) {
+                            const hostname = value.includes("//")
+                                ? value.split("//")[1]
                                 : value;
-                            host.list.value = [...host.list.peek(), hostname];
-                            target.value = '';
+
+                            if (host.list.value[hostname] === undefined) {
+                                host.list.value = {
+                                    ...host.list.peek(),
+                                    [hostname]: null
+                                };
+
+                                host.save();
+                                target.value = "";
+                            }
                         }
                     }
                 }}
             />
         </div>
     );
-}
+};

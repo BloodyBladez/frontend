@@ -1,7 +1,8 @@
-preset =
+preset = @block {
   display flex
   gap 5px
   align-items center
+}
 
 .header
   display flex
@@ -24,7 +25,7 @@ animation_length = .3s
   width 40px
   height 40px
   cursor pointer
-  background var(--image) no-repeat center/cover
+  background var(--image) no-repeat center / cover
   transition filter animation_length ease
 
   &:visited

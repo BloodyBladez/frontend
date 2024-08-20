@@ -1,20 +1,24 @@
-import type {RefObject} from "preact";
-import {type Signal} from "@preact/signals";
-import {useEffect, useRef, useState} from "preact/hooks";
-import {TextField} from "@";
+import type { RefObject } from "preact";
+import type { Signal } from "@preact/signals";
+import { useEffect, useRef, useState } from "preact/hooks";
+import { TextField } from "@";
 
 export type NicknameProps = {
     value: Signal<string>;
     onSave: (nickname: string) => any;
     className?: string;
-}
+};
 
-export const NicknameChangeable = ({ value, onSave, className }: NicknameProps) => {
+export const NicknameChangeable = ({
+    value,
+    onSave,
+    className
+}: NicknameProps) => {
     const inputRef = useRef<HTMLInputElement | HTMLDivElement>(null);
     const [isEditing, setIsEditing] = useState(false);
 
     useEffect(() => {
-        if(isEditing && inputRef.current) {
+        if (isEditing && inputRef.current) {
             inputRef.current.focus();
         }
     }, [isEditing]);
@@ -48,6 +52,6 @@ export const NicknameChangeable = ({ value, onSave, className }: NicknameProps) 
             )}
         </div>
     );
-}
+};
 
 export default NicknameChangeable;

@@ -1,12 +1,17 @@
-import {type HTMLAttributes} from "react";
-import {useRef} from "preact/hooks";
-import {Image} from "../../classes/Image";
+import { type HTMLAttributes } from "react";
+import { useRef } from "preact/hooks";
+import { Image } from "../../classes/Image";
 
 export type AvatarProps = HTMLAttributes<HTMLImageElement> & {
     onSave: (url: string) => any;
-}
+};
 
-export const AvatarChangeable = ({ src, width = 200, height = 200, onSave }: AvatarProps) => {
+export const AvatarChangeable = ({
+    src,
+    width = 200,
+    height = 200,
+    onSave
+}: AvatarProps) => {
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     return (
@@ -17,7 +22,7 @@ export const AvatarChangeable = ({ src, width = 200, height = 200, onSave }: Ava
                 width={width}
                 height={height}
                 onClick={() => {
-                    if(fileInputRef.current) {
+                    if (fileInputRef.current) {
                         fileInputRef.current.click();
                     }
                 }}
@@ -26,11 +31,12 @@ export const AvatarChangeable = ({ src, width = 200, height = 200, onSave }: Ava
                 type="file"
                 accept="image/*"
                 ref={fileInputRef}
-                onChange={async(event) => {
+                onChange={async (event) => {
                     const target = event.target as HTMLInputElement;
-                    if(target.files && target.files[0]) {
+                    if (target.files && target.files[0]) {
                         const file = target.files[0];
-                        if(file.size > 1048576) return alert("Файл слишком большой");
+                        if (file.size > 1048576)
+                            return alert("Файл слишком большой");
                         const url = await new Image(
                             file.type,
                             await file.arrayBuffer()
@@ -42,4 +48,4 @@ export const AvatarChangeable = ({ src, width = 200, height = 200, onSave }: Ava
             />
         </>
     );
-}
+};

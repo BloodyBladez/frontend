@@ -1,1 +1,1 @@
-export * from './NicknameChangeable';
+export * from "./NicknameChangeable";

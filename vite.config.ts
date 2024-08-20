@@ -1,5 +1,5 @@
-import {defineConfig} from "vite";
-import {resolve} from "path";
+import { defineConfig } from "vite";
+import { resolve } from "path";
 import preact from "@preact/preset-vite";
 import alias from "@rollup/plugin-alias";
 
@@ -10,8 +10,8 @@ export default defineConfig({
         alias({
             entries: [
                 {
-                    find: '@',
-                    replacement: resolve(__dirname, 'src', 'components')
+                    find: "@",
+                    replacement: resolve(__dirname, "src", "components")
                 }
             ]
         }),
@@ -23,30 +23,30 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                menu: resolve(__dirname, 'index.html'),
-                profile: resolve(__dirname, 'profile.html'),
-                character: resolve(__dirname, 'character.html')
+                menu: resolve(__dirname, "index.html"),
+                profile: resolve(__dirname, "profile.html"),
+                character: resolve(__dirname, "character.html")
             },
             output: {
                 manualChunks(id) {
-                    if(/node_modules\/.*preact.*/.test(id)) {
-                        return 'lib';
+                    if (/node_modules\/.*preact.*/.test(id)) {
+                        return "lib";
                     }
                 }
             },
-            treeshake: 'recommended'
+            treeshake: "recommended"
         },
         modulePreload: true,
-        cssMinify: 'lightningcss',
-        minify: 'esbuild'
+        cssMinify: "lightningcss",
+        minify: "esbuild"
     },
     css: {
         preprocessorOptions: {
             styl: {
                 compress: true,
-                additionalData: variables.map(([name, value]) =>
-                    `$${name} = ${value}`
-                ).join('\n')
+                additionalData: variables
+                    .map(([name, value]) => `$${name} = ${value}`)
+                    .join("\n")
             }
         }
     }

@@ -6,8 +6,8 @@ export class Image {
 
     async process(width: number, height: number) {
         const bitmap = await createImageBitmap(new Blob([this._raw]));
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d')!;
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d")!;
 
         canvas.width = width;
         canvas.height = height;

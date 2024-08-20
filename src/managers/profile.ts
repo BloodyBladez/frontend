@@ -1,13 +1,18 @@
-import {createContext} from "preact";
-import {computed, type ReadonlySignal, signal, type Signal} from "@preact/signals";
-import LocalStorage, {type Profile} from "../classes/LocalStorage";
+import { createContext } from "preact";
+import {
+    computed,
+    type ReadonlySignal,
+    signal,
+    type Signal
+} from "@preact/signals";
+import LocalStorage, { type Profile } from "../classes/LocalStorage";
 import config from "../config";
 
 export const ProfileManager = {
-    nickname: signal('') as Signal<Profile['nickname']>,
-    avatar: signal('') as Signal<Profile['avatar']>,
-    fixedNickname: computed(() => '') as ReadonlySignal<Profile['nickname']>,
-    fixedAvatar: computed(() => '') as ReadonlySignal<Profile['avatar']>,
+    nickname: signal("") as Signal<Profile["nickname"]>,
+    avatar: signal("") as Signal<Profile["avatar"]>,
+    fixedNickname: computed(() => "") as ReadonlySignal<Profile["nickname"]>,
+    fixedAvatar: computed(() => "") as ReadonlySignal<Profile["avatar"]>,
     setNickname(nickname: string) {
         ProfileManager.nickname.value = nickname;
         ProfileManager.save();
@@ -17,31 +22,31 @@ export const ProfileManager = {
         ProfileManager.save();
     },
     load() {
-        const data = LocalStorage.get('profile');
-        const base = { nickname: '', avatar: '' };
+        const data = LocalStorage.get("profile");
+        const base = { nickname: "", avatar: "" };
 
         ProfileManager.nickname.value = data?.nickname ?? base.nickname;
         ProfileManager.avatar.value = data?.avatar ?? base.avatar;
 
-        if(!data) ProfileManager.save();
+        if (!data) ProfileManager.save();
     },
     save() {
         const data = {
             nickname: ProfileManager.nickname.value,
             avatar: ProfileManager.avatar.value
-        }
+        };
 
-        LocalStorage.set('profile', data);
+        LocalStorage.set("profile", data);
     }
-}
+};
 
 ProfileManager.fixedNickname = computed(() =>
-    ProfileManager.nickname.value !== ''
+    ProfileManager.nickname.value !== ""
         ? ProfileManager.nickname.value
         : config.default.nickname
 );
 ProfileManager.fixedAvatar = computed(() =>
-    ProfileManager.avatar.value !== ''
+    ProfileManager.avatar.value !== ""
         ? ProfileManager.avatar.value
         : config.default.avatar
 );
