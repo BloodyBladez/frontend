@@ -1,7 +1,7 @@
 <div align="center" >
 <img 
     alt="BloodyBladez logo" 
-    src="./public/logo.webp"
+    src="public/banners-icons/BB-Banner-Frontend.webp"
 >
 <br>
 
