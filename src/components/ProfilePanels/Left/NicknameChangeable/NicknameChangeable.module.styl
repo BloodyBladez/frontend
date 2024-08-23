@@ -1,0 +1,39 @@
+nickname_size = 2.5vw
+mobile_nickname_size = 6vw
+
+.nickname_box
+  display flex
+  flex-direction row
+  gap 10px
+  align-items center
+  justify-content center
+  white-space nowrap
+  width 100%
+
+  & > input
+    appearance none
+    border none
+    background none
+    outline none
+    font-size nickname_size
+    color white
+    text-align center
+    box-sizing border-box
+    width 100%
+
+  & > div
+    overflow hidden
+    font-size nickname_size
+    text-overflow ellipsis
+    display inline-block
+    white-space nowrap
+
+  & > img
+    background $additional-color
+    padding 5px
+    border-radius 5px
+    cursor pointer
+
+  @media screen and (max-width 800px)
+    & > input, & > div
+      font-size mobile_nickname_size

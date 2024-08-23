@@ -1,3 +1,5 @@
+animation_length = .3s
+
 preset = @block {
   display flex
   gap 5px
@@ -18,18 +20,15 @@ preset = @block {
 
 .right
   {preset}
+  & > a
+    width 40px
+    height 40px
+    cursor pointer
+    background var(--image) no-repeat center / cover
+    transition filter animation_length ease
 
-animation_length = .3s
+    &:visited
+      color inherit
 
-.right > a
-  width 40px
-  height 40px
-  cursor pointer
-  background var(--image) no-repeat center / cover
-  transition filter animation_length ease
-
-  &:visited
-    color inherit
-
-  &:hover
-    filter brightness(50%)
+    &:hover
+      filter brightness(50%)

@@ -532,11 +532,6 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-bloodybladez-api-types@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/bloodybladez-api-types/-/bloodybladez-api-types-1.0.3.tgz#8314f638c65c54a5d9fb3574105c957dc4afa95d"
-  integrity sha512-WX2Elx+vgco8bb0jPEMEiGNvOfnpxsogTcoxXH2HHNWiJZDTZqsk21onIYqKfCrmeY7WFGfhJ5+cRhNYenOnAQ==
-
 boolbase@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"

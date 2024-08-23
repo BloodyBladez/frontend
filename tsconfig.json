@@ -26,14 +26,31 @@
       "react-dom": [
         "./node_modules/preact/compat/"
       ],
-      "@": [
+      "@components": [
         "./src/components"
+      ],
+      "@managers": [
+        "./src/managers"
+      ],
+      "@pages": [
+        "./src/pages"
+      ],
+      "@data": [
+        "./src/data"
+      ],
+      "@classes": [
+        "./src/classes"
+      ],
+      "@config": [
+        "./src/config.ts"
+      ],
+      "@api-types": [
+        "./external/api-types"
       ]
     },
     "removeComments": true
   },
   "include": [
-    "node_modules/preact/src/internal.d.ts",
     "node_modules/vite/client.d.ts",
     "src/**/*"
   ]

@@ -1,11 +1,14 @@
-import { MutableServerList, SelectedServer } from "@";
+import { Component } from "preact";
+import { MutableServerList, SelectedServer } from "@components";
 import styles from "./Battle.module.styl";
 
-const Battle = () => (
-    <div className={styles.selector}>
-        <SelectedServer size={40} />
-        <MutableServerList />
-    </div>
-);
-
-export default Battle;
+export class Battle extends Component {
+    render() {
+        return (
+            <div className={styles.selector}>
+                <SelectedServer />
+                <MutableServerList />
+            </div>
+        );
+    }
+}

@@ -5,7 +5,7 @@
   "description": "Frontend for the game BloodyBladeZ, created using the Preact",
   "main": "src/index.tsx",
   "scripts": {
-    "build": "vite build",
+    "build": "tsc && vite build",
     "dev": "vite --port 9050",
     "dev:open": "vite --host 0.0.0.0 --port 9050",
     "preview": "vite preview --port 9051",
@@ -19,7 +19,6 @@
     "@preact/preset-vite": "^2.9.0",
     "@rollup/plugin-alias": "^5.1.0",
     "@types/node": "^22.2.0",
-    "bloodybladez-api-types": "^1.0.3",
     "lightningcss": "^1.26.0",
     "stylus": "^0.63.0",
     "typescript": "^5.5.4",

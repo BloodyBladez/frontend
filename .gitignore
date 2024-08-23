@@ -1,5 +1,7 @@
 *.tsbuildinfo
 /dist
 /.idea
+/.vscode
 /node_modules
 /_all-assets
+vite.config.ts.timestamp-*-*.mjs

@@ -1,29 +1,41 @@
 import { createContext } from "preact";
-import { signal, type Signal } from "@preact/signals";
-import LocalStorage, { type Host } from "../classes/LocalStorage";
-import type { ApiTypes } from "bloodybladez-api-types";
+import {
+    computed,
+    signal,
+    type Signal,
+    type ReadonlySignal
+} from "@preact/signals";
+import { LocalStorage, type Host, type HostCredentials } from "@classes";
+import type { ApiTypes } from "@api-types";
+
+export type ServerData = ApiTypes["/server-info"]["Reply"] & {
+    isSecure: boolean;
+    timestamp: number;
+};
 
 export const HostManager = {
     selected: signal("") as Signal<Host["selected"]>,
-    list: signal({}) as Signal<
-        Record<string, ApiTypes["/server-info"]["Reply"] | null>
-    >,
-    timestamp: signal({}) as Signal<Record<string, number>>,
+    fixedSelected: computed(() => "") as ReadonlySignal<Host["selected"]>,
+    credentials: signal({}) as Signal<HostCredentials>,
+    list: signal({}) as Signal<Record<string, ServerData>>,
     load() {
         const data = LocalStorage.get("host");
         const base = { selected: "", list: {} };
 
         HostManager.selected.value = data?.selected ?? base.selected;
         HostManager.list.value =
-            data?.list ??
             data?.list.reduce(
                 (acc, k) => {
-                    acc[k] = null;
+                    acc[k] = {};
                     return acc;
                 },
-                {} as Record<string, null>
-            ) ??
-            base.list;
+                {} as Record<string, {}>
+            ) ?? base.list;
+
+        if (HostManager.selected.value !== "")
+            HostManager.credentials.value =
+                LocalStorage.get(`host_${HostManager.selected.value}`) ?? {};
+
         if (!data) HostManager.save();
     },
     save() {
@@ -33,7 +45,18 @@ export const HostManager = {
         };
 
         LocalStorage.set("host", data);
+        if (HostManager.selected.value !== "")
+            LocalStorage.set(
+                `host_${HostManager.selected.value}`,
+                HostManager.credentials.value
+            );
     }
 };
+
+HostManager.fixedSelected = computed(() =>
+    HostManager.selected.value !== ""
+        ? HostManager.selected.value
+        : "Не выбрано"
+);
 
 export const HostContext = createContext({} as typeof HostManager);

@@ -1,23 +1,8 @@
-import Menu from "../pages/Menu/Menu";
-import Profile from "../pages/Profile/Profile";
-import Battle from "../pages/Battle/Battle";
-import Character from "../pages/Character/Character";
+import { Battle, Menu, NotFound, Profile } from "@pages";
 
-export default [
-    {
-        path: "/",
-        element: <Menu />
-    },
-    {
-        path: "/profile",
-        element: <Profile />
-    },
-    {
-        path: "/battle",
-        element: <Battle />
-    },
-    {
-        path: "/characters",
-        element: <Character />
-    }
+export const routes = [
+    { path: "/", element: <Menu /> },
+    { path: "/profile", element: <Profile /> },
+    { path: "/battle", element: <Battle /> },
+    { path: undefined, element: <NotFound /> }
 ];

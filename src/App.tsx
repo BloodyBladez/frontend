@@ -1,27 +1,31 @@
-import { useEffect } from "preact/hooks";
+import { Component } from "preact";
 
-import { HostContext, HostManager } from "./managers/host";
-import { ProfileContext, ProfileManager } from "./managers/profile";
-import { Header, Router } from "@";
+import {
+    ProfileContext,
+    ProfileManager,
+    HostContext,
+    HostManager
+} from "@managers";
+import { Header, Router } from "@components";
 
 import "./styles/index.styl";
 
-const App = () => {
-    useEffect(() => {
+class App extends Component {
+    componentDidMount() {
         HostManager.load();
         ProfileManager.load();
-    }, []);
+    }
 
-    return (
-        <>
-            <Header />
+    render() {
+        return (
             <HostContext.Provider value={HostManager}>
                 <ProfileContext.Provider value={ProfileManager}>
+                    <Header />
                     <Router />
                 </ProfileContext.Provider>
             </HostContext.Provider>
-        </>
-    );
-};
+        );
+    }
+}
 
 export default App;

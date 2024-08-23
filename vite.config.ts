@@ -10,8 +10,28 @@ export default defineConfig({
         alias({
             entries: [
                 {
-                    find: "@",
+                    find: "@components",
                     replacement: resolve(__dirname, "src", "components")
+                },
+                {
+                    find: "@managers",
+                    replacement: resolve(__dirname, "src", "managers")
+                },
+                {
+                    find: "@pages",
+                    replacement: resolve(__dirname, "src", "pages")
+                },
+                {
+                    find: "@data",
+                    replacement: resolve(__dirname, "src", "data")
+                },
+                {
+                    find: "@classes",
+                    replacement: resolve(__dirname, "src", "classes")
+                },
+                {
+                    find: "@config",
+                    replacement: resolve(__dirname, "src", "config.ts")
                 }
             ]
         }),
@@ -23,9 +43,7 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                menu: resolve(__dirname, "index.html"),
-                profile: resolve(__dirname, "profile.html"),
-                character: resolve(__dirname, "character.html")
+                root: resolve(__dirname, "index.html")
             },
             output: {
                 manualChunks(id) {

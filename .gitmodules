@@ -1,0 +1,3 @@
+[submodule "external/api-types"]
+	path = external/api-types
+	url = https://github.com/BloodyBladez/api-types-ts.git

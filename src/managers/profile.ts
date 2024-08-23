@@ -5,8 +5,8 @@ import {
     signal,
     type Signal
 } from "@preact/signals";
-import LocalStorage, { type Profile } from "../classes/LocalStorage";
-import config from "../config";
+import { LocalStorage, type Profile } from "@classes";
+import config from "@config";
 
 export const ProfileManager = {
     nickname: signal("") as Signal<Profile["nickname"]>,

@@ -8,12 +8,20 @@ export interface Host {
     list: string[];
 }
 
+export interface HostCredentials {
+    id?: string;
+    key?: string;
+    password?: string;
+}
+
 export interface LocalStorageMap {
     profile?: Profile;
     host?: Host;
+
+    [key: `host_${string}`]: HostCredentials;
 }
 
-class LocalStorage {
+export class LocalStorage {
     public static set<K extends keyof LocalStorageMap>(
         key: K,
         value: LocalStorageMap[K],
@@ -39,5 +47,3 @@ class LocalStorage {
         localStorage.removeItem(key);
     }
 }
-
-export default LocalStorage;
