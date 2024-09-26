@@ -1,4 +1,4 @@
-export class Image {
+export class AppImage {
     constructor(
         private readonly _type: string,
         private readonly _raw: ArrayBuffer

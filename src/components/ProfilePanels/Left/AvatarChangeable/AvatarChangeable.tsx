@@ -1,6 +1,6 @@
 import { Component, createRef, type JSX } from "preact";
 import { ProfileContext, type ProfileManager } from "@managers";
-import { Image } from "@classes";
+import { AppImage } from "@classes";
 import styles from "./AvatarChangeable.module.styl";
 
 export class AvatarChangeable extends Component {
@@ -20,7 +20,7 @@ export class AvatarChangeable extends Component {
         if (currentTarget.files && currentTarget.files[0]) {
             const file = currentTarget.files[0];
             if (file.size > 1048576) return alert("Файл слишком большой");
-            const url = await new Image(
+            const url = await new AppImage(
                 file.type,
                 await file.arrayBuffer()
             ).process(200, 200);

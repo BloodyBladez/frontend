@@ -1,5 +1,5 @@
 import { Component } from "preact";
-import { HostContext, type HostManager, ServerData } from "@managers";
+import { HostContext, type HostManager, type ServerData } from "@managers";
 import type { ApiTypes } from "@api-types";
 import styles from "./ServerRecord.module.styl";
 

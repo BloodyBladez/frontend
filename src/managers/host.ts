@@ -5,7 +5,7 @@ import {
     type Signal,
     type ReadonlySignal
 } from "@preact/signals";
-import { LocalStorage, type Host, type HostCredentials } from "@classes";
+import { AppLocalStorage, type Host, type HostCredentials } from "@classes";
 import type { ApiTypes } from "@api-types";
 
 export type ServerData = ApiTypes["/server-info"]["Reply"] & {
@@ -19,7 +19,7 @@ export const HostManager = {
     credentials: signal({}) as Signal<HostCredentials>,
     list: signal({}) as Signal<Record<string, ServerData>>,
     load() {
-        const data = LocalStorage.get("host");
+        const data = AppLocalStorage.get("host");
         const base = { selected: "", list: {} };
 
         HostManager.selected.value = data?.selected ?? base.selected;
@@ -34,7 +34,7 @@ export const HostManager = {
 
         if (HostManager.selected.value !== "")
             HostManager.credentials.value =
-                LocalStorage.get(`host_${HostManager.selected.value}`) ?? {};
+                AppLocalStorage.get(`host_${HostManager.selected.value}`) ?? {};
 
         if (!data) HostManager.save();
     },
@@ -44,9 +44,9 @@ export const HostManager = {
             list: Object.keys(HostManager.list.value)
         };
 
-        LocalStorage.set("host", data);
+        AppLocalStorage.set("host", data);
         if (HostManager.selected.value !== "")
-            LocalStorage.set(
+            AppLocalStorage.set(
                 `host_${HostManager.selected.value}`,
                 HostManager.credentials.value
             );

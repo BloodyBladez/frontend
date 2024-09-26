@@ -5,7 +5,7 @@ import {
     signal,
     type Signal
 } from "@preact/signals";
-import { LocalStorage, type Profile } from "@classes";
+import { AppLocalStorage, type Profile } from "@classes";
 import config from "@config";
 
 export const ProfileManager = {
@@ -22,7 +22,7 @@ export const ProfileManager = {
         ProfileManager.save();
     },
     load() {
-        const data = LocalStorage.get("profile");
+        const data = AppLocalStorage.get("profile");
         const base = { nickname: "", avatar: "" };
 
         ProfileManager.nickname.value = data?.nickname ?? base.nickname;
@@ -36,7 +36,7 @@ export const ProfileManager = {
             avatar: ProfileManager.avatar.value
         };
 
-        LocalStorage.set("profile", data);
+        AppLocalStorage.set("profile", data);
     }
 };
 

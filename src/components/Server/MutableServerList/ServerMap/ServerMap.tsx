@@ -8,8 +8,6 @@ export class ServerMap extends Component {
     declare context: typeof HostManager;
 
     render() {
-        const data = {};
-
         return (
             <div className={styles.server_map}>
                 {Object.keys(this.context.list.value).map((hostname) => (

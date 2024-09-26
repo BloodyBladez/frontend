@@ -21,7 +21,7 @@ export interface LocalStorageMap {
     [key: `host_${string}`]: HostCredentials;
 }
 
-export class LocalStorage {
+export class AppLocalStorage {
     public static set<K extends keyof LocalStorageMap>(
         key: K,
         value: LocalStorageMap[K],

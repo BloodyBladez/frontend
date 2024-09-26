@@ -25,12 +25,19 @@
   gap 2px
   flex-direction column
   justify-content end
+  justify-items end
   text-wrap nowrap
+
+  & > div
+    text-align right
+
   & > button
     appearance none
     background none
     border none
     color white
+    //display block
+    //border $additional-color solid 1px
 
 .selected
   background-color $additional-color
